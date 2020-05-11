@@ -19,7 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
 
-				<div class="row">
+				<div class="row" id="wrapper-static-hero-content">
 
 					<?php dynamic_sidebar( 'statichero' ); ?>
 
@@ -30,4 +30,25 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div><!-- #wrapper-static-hero -->
 
 	<?php
+
+// Adding Default Hero Image
+else :	?>
+
+	<!-- ******************* The Hero Widget Area ******************* -->
+
+	<div class="wrapper" id="wrapper-static-hero">
+
+			<div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
+
+				<div class="row" id="wrapper-static-hero-content">
+
+
+
+				</div>
+
+			</div>
+
+	</div><!-- #wrapper-static-hero -->
+
+<?php
 endif;
