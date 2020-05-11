@@ -9,6 +9,22 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
+* Create Hero Setting and Upload Control
+*/
+function your_theme_new_customizer_settings($wp_customize) {
+	// add a setting for the site hero
+	$wp_customize->add_setting('your_theme_hero');
+	// Add a control to upload the hero
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'your_theme_hero',
+	array(
+	'label' => 'Hero Image',
+	'section' => 'title_tagline',
+	'settings' => 'your_theme_hero',
+	) ) );
+	}
+	add_action('customize_register', 'your_theme_new_customizer_settings');
+
+/**
  * Add postMessage support for site title and description for the Theme Customizer.
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.

@@ -15,7 +15,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<!-- ******************* The Hero Widget Area ******************* -->
 
-	<div class="wrapper" id="wrapper-static-hero">
+	<div <?php if(get_theme_mod( 'your_theme_hero' ) ) :  ?> style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('<?php echo get_theme_mod('your_theme_hero'); ?>');" <?php endif;?> class="wrapper" id="wrapper-static-hero">
 
 			<div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
 
@@ -31,12 +31,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<?php
 
-// Adding Default Hero Image
+// Adding Default Hero Image Area
 else :	?>
 
 	<!-- ******************* The Hero Widget Area ******************* -->
 
-	<div class="wrapper" id="wrapper-static-hero">
+	<div <?php if(get_theme_mod( 'your_theme_hero' ) ) :  ?> style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('<?php echo get_theme_mod('your_theme_hero'); ?>');" <?php endif;?> class="wrapper" id="wrapper-static-hero">
 
 			<div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
 
