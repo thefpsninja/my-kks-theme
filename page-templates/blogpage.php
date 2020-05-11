@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Post Page Layout
+ * Template Name: Blogpage Layout
  *
  * This template can be used to override the default template and sidebar setup
  *
