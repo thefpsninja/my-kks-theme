@@ -100,9 +100,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 	function understrap_widgets_init() {
 		register_sidebar(
 			array(
-				'name'          => __( 'Right Sidebar', 'understrap' ),
+				'name'          => __( 'Right Sidebar: Main', 'understrap' ),
 				'id'            => 'right-sidebar',
-				'description'   => __( 'Right sidebar widget area', 'understrap' ),
+				'description'   => __( 'Used in Homepage and Archive', 'understrap' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',
@@ -112,9 +112,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Left Sidebar', 'understrap' ),
+				'name'          => __( 'Left Sidebar: Secondary', 'understrap' ),
 				'id'            => 'left-sidebar',
-				'description'   => __( 'Left sidebar widget area', 'understrap' ),
+				'description'   => __( 'Used in Archive', 'understrap' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',
