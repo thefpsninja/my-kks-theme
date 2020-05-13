@@ -122,7 +122,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			)
 		);
 
-		register_sidebar(
+/* 		register_sidebar(
 			array(
 				'name'          => __( 'Hero Slider', 'understrap' ),
 				'id'            => 'hero',
@@ -132,9 +132,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 				'before_title'  => '',
 				'after_title'   => '',
 			)
-		);
+		); */
 
-		register_sidebar(
+/* 		register_sidebar(
 			array(
 				'name'          => __( 'Hero Canvas', 'understrap' ),
 				'id'            => 'herocanvas',
@@ -144,13 +144,13 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 				'before_title'  => '',
 				'after_title'   => '',
 			)
-		);
+		); */
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Top Full', 'understrap' ),
+				'name'          => __( 'Hero Image', 'understrap' ),
 				'id'            => 'statichero',
-				'description'   => __( 'Full top widget with dynamic grid', 'understrap' ),
+				'description'   => __( 'Hero Image widget with dynamic grid', 'understrap' ),
 				'before_widget' => '<div id="%1$s" class="static-hero-widget %2$s dynamic-classes">',
 				'after_widget'  => '</div><!-- .static-hero-widget -->',
 				'before_title'  => '<h3 class="widget-title">',
