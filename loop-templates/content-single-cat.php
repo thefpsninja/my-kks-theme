@@ -74,7 +74,6 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php 
 	$image = get_field('cat_picture');
-	$size = 'full';
 	if( !empty( $image ) ) : ?>
 	<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"><br>
 	<?php endif; ?>
