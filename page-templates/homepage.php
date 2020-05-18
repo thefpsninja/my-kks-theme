@@ -19,13 +19,18 @@ get_template_part( 'sidebar-templates/sidebar', 'statichero' );
 // Adding USP Template
 get_template_part( 'sidebar-templates/sidebar', 'hero' );
 
-
 ?>
 
 <!-- Jumbotron with USP -->
 <div class="jumbotron jumbotron-fluid bg-dark text-white">
-		<div class="container">			
+
+		<div class="container">	<!-- USP Container -->		
 			<?php get_template_part('global-templates/usps'); ?>
+		</div>
+
+		<div class="container border border-warning rounded"> <!-- Sucess-Stories Container -->
+		<h2 class="text-warning text-center m-2 font-weight-bold"><?php _e('Success Stories'); ?></h2>
+			<?php get_template_part('global-templates/success-stories'); ?>
 		</div>
 </div>
 <!-- End of Jumbotron -->
@@ -41,6 +46,9 @@ get_template_part( 'sidebar-templates/sidebar', 'hero' );
 				<main class="site-main" id="main" role="main">
 
 					<?php
+					// This calls the cats. Make it call the latest Cats! and add text for that! and place it better!
+					get_template_part('global-templates/cats');
+
 					while ( have_posts() ) {
 						the_post();
 
