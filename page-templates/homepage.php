@@ -17,9 +17,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 get_template_part( 'sidebar-templates/sidebar', 'statichero' );
 
 // Adding USP Template
-get_template_part( 'sidebar-templates/sidebar', 'hero' )
+get_template_part( 'sidebar-templates/sidebar', 'hero' );
+
 
 ?>
+
+<!-- Jumbotron with USP -->
+<div class="jumbotron jumbotron-fluid bg-dark text-white">
+		<div class="container">			
+			<?php get_template_part('global-templates/usps'); ?>
+		</div>
+</div>
+<!-- End of Jumbotron -->
 
 <div class="wrapper" id="page-wrapper">
 
