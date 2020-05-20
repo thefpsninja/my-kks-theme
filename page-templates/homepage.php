@@ -16,9 +16,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 // Adding Top Full Widget
 get_template_part( 'sidebar-templates/sidebar', 'statichero' );
 
-// Adding USP Template
-get_template_part( 'sidebar-templates/sidebar', 'hero' );
-
 ?>
 
 <!-- Jumbotron with USP -->
@@ -46,7 +43,8 @@ get_template_part( 'sidebar-templates/sidebar', 'hero' );
 				<main class="site-main" id="main" role="main">
 
 					<?php
-					// This calls the cats. Make it call the latest Cats! and add text for that! and place it better!
+					// Latest Cats
+					echo '<h1 class="text-danger">' . __('Latest Cats', 'understrap') . "</h1>";
 					get_template_part('global-templates/cats');
 
 					while ( have_posts() ) {

@@ -11,8 +11,11 @@ defined( 'ABSPATH' ) || exit;
 
 // Get the three latest USPs
 $cats = new WP_Query([
-	'post_type' 		=>	'shelter_cats',
-	'posts_per_page'		=> 5,
+	'post_type' 			=>	'shelter_cats',
+	'posts_per_page'		=> 10,
+	'paged' 				=> get_query_var( 'paged' ),
+	'order'					=> 'DESC',
+	'orderby'				=> 'date',
 ]);
 
 if ($cats->have_posts() ) :
@@ -29,7 +32,7 @@ if ($cats->have_posts() ) :
 			<!-- The USPs content item loop -->
 			<?php get_template_part('loop-templates/content', 'shelter_cats'); ?>
 		<?php endwhile; ?>
-
+		<?php understrap_pagination(['total'=>$cats->max_num_pages,]); ?>
 		</div><!-- ./row -->
 	</div><!-- ./container -->
 </div><!-- ./wrapper -->
