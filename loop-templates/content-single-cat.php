@@ -81,7 +81,7 @@ defined( 'ABSPATH' ) || exit;
 	<?php endif; ?>
 
 
-	<?php if( get_field('cat_adopted_at') ) : _?>
+	<?php if( get_field('cat_adopted_at') ) : ?>
 	<?php _e('<p class="card w-25 m-1 p-1 pl-5 bg-dark text-white">Cat adopted at: ') . the_field('cat_adopted_at'). _e('</p>'); ?><br>
 	<?php endif; ?>
 
