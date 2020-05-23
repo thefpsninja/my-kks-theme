@@ -46,31 +46,33 @@ defined( 'ABSPATH' ) || exit;
 /* ACF Template */ 
 ?>
 
-	<?php _e('The cats Age: ') . the_field('cat_age') . _e(' Years'); ?><br>
+<div class="card w-25 m-5 pt-4 pl-4">
+	<?php _e('The Cats Age: ') . the_field('cat_age') . _e(' Years'); ?><br>
 
 	<?php 
 	$city = get_field('cat_city');
-	_e('The cats City: ');
+	_e('The Cats City: ');
 	if ( $city ) :
 	echo esc_html( $city->name ); ?><br>
 	<?php endif; ?>
 
 	<?php 
 	$size = get_field('cat_size');
-	_e('The cats Size: ');
+	_e('The Cats Size: ');
 	if ( $size ) :	
 	echo esc_html( $size->name ); ?><br>
 	<?php endif; ?>
 
-	<?php _e('The cats Color: ') . the_field('cat_color'); ?><br>
-	<?php _e('The cats Weight: ') . the_field('cat_weight') . _e('kg'); ?><br>
+	<?php _e('The Cats Color: ') . the_field('cat_color'); ?><br>
+	<?php _e('The Cats Weight: ') . the_field('cat_weight') . _e('kg'); ?><br>
 
-	<?php 
+	<p><?php 
 	$gender = get_field('cat_gender');
-	_e('The cats Gender: ');
+	_e('The Cats Gender: ');
 	if ( $gender ) :	
 	echo esc_html( $gender->name ); ?><br>
-	<?php endif; ?>
+	<?php endif; ?></p>
+</div> <!-- ./card -->
 
 	<?php 
 	$image = get_field('cat_picture');
@@ -80,7 +82,7 @@ defined( 'ABSPATH' ) || exit;
 
 
 	<?php if( get_field('cat_adopted_at') ) : _?>
-	<?php _e('Cat adopted at: ') . the_field('cat_adopted_at'); ?><br>
+	<?php _e('<p class="card w-25 m-1 p-1 pl-5 bg-dark text-white">Cat adopted at: ') . the_field('cat_adopted_at'). _e('</p>'); ?><br>
 	<?php endif; ?>
 
 <?php
