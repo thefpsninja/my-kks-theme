@@ -80,7 +80,7 @@ defined( 'ABSPATH' ) || exit;
 
 
 	<?php if( get_field('cat_adopted_at') ) : _?>
-	<?php e('Cat adopted at: ') . the_field('cat_adopted_at'); ?><br>
+	<?php _e('Cat adopted at: ') . the_field('cat_adopted_at'); ?><br>
 	<?php endif; ?>
 
 <?php
