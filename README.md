@@ -10,3 +10,7 @@ First put the folder inside *WordPressInstallation/wp-content/themes* and run a 
 
 Create a page that will be your `Homepage` and choose the template `Homepage Layout`.<br>
 Then do the same with your `Blogpage` and choose the template `Blogpage Layout`.
+
+PS. This theme has support for "Contact Form 7" And have custom styling for it!.
+
+Hope you will enjoy the Theme!
